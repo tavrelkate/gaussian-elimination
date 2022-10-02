@@ -17,6 +17,16 @@ Then we just need to pass it in `Matrix::GaussianElimination` instance and `buil
 
     gaussian_elimination_matrix = Matrix::GaussianElimination.new(matrix).build_echelon_form
 
+Output:
+
+    #> gaussian_elimination_matrix 
+    [
+        [1.0, 2.0, 3.0, 1.0],
+        [-0.0, 1.0, 0.8, -0.8],
+        [0.0,  0.0, 1.0, -1.0]
+    ]
+
+
 NOTES: `Matrix::GaussianElimination` dosent affect your original matrix.
 
 
