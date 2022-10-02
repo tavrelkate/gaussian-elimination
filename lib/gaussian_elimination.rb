@@ -10,7 +10,7 @@ module Matrix
       @array = Marshal.load(Marshal.dump(array))
     end
 
-    def build
+    def build_echelon_form
       each_array_element do |column_index, row_index|
         @column_index  = column_index
         @row_index     = row_index
@@ -67,9 +67,3 @@ module Matrix
     end
   end
 end
-
-# matrix = [
-#   [1,  2,  3,  1]
-# ]
-
-# p Matrix::GaussianElimination.new(matrix).build

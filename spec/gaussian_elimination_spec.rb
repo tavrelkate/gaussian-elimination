@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe Matrix::GaussianElimination do
-  subject { Matrix::GaussianElimination.new(matrix).build }
+  subject { Matrix::GaussianElimination.new(matrix).build_echelon_form }
 
   context 'validations' do
     let(:matrix) { '1, 2, 4, 5' }
