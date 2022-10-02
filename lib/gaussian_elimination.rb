@@ -2,7 +2,7 @@
 
 module Matrix
   class GaussianElimination
-    attr_accessor :array, :column_index, :row_index, :focus_element
+    attr_accessor :array, :column_index, :row_index, :coefficient
 
     def initialize(array)
       validate_input_data!(array)
@@ -14,9 +14,9 @@ module Matrix
       each_array_element do |column_index, row_index|
         @column_index  = column_index
         @row_index     = row_index
-        @focus_element = current_element
+        @coefficient   = current_element
 
-        is_diagonal? ? focus_element_to_eq_one_and_update_row : focus_element_to_eq_zero_and_update_row
+        is_diagonal? ? coefficient_to_eq_one_and_update_row : coefficient_to_eq_zero_and_update_row
       end
     end
 
@@ -37,22 +37,22 @@ module Matrix
 
     # Transforming diagonal elements to 1. Then updating the rest elements of the row 
     # Multiplying them to 1.0 / diagonal element
-    def focus_element_to_eq_one_and_update_row
-      current_row.map! { |el| el * 1.0 / focus_element }
+    def coefficient_to_eq_one_and_update_row
+      current_row.map! { |el| el * 1.0 / coefficient }
 
-      focus_element_to_be_positive_and_update_row if current_element.negative?
+      coefficient_to_be_positive_and_update_row if current_element.negative?
     end
 
     # Transforming under diagonal elements to 0. Then updating the rest elements of the row 
     # Reduce them to diagonal element * current under diagonal element
-    def focus_element_to_eq_zero_and_update_row
+    def coefficient_to_eq_zero_and_update_row
       current_row.each_with_index do |_element, index|
-        current_row[index] -= current_row_transposed[index] * focus_element
+        current_row[index] -= current_row_transposed[index] * coefficient
       end
     end
 
     # Transforming element to possitive. Then updating the rest elements of the row 
-    def focus_element_to_be_positive_and_update_row
+    def coefficient_to_be_positive_and_update_row
       current_row.map!(&:-@)
     end
 
