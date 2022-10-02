@@ -30,7 +30,7 @@ Transforming matrix to echelon form:
 
 ## Contacts
 
-Contact me if you have any doubts or questions about this gem.
+Contact me if you have any doubts or questions about this repo.
 
 Email: tavrelkate@gmail.com
 Telegram: @tavrelkate
