@@ -22,7 +22,7 @@ NOTES: `Matrix::GaussianElimination` dosent affect your original matrix.
 ## The algorithm
 
 Transforming matrix to echelon form:
-![alt text](https://www.researchgate.net/profile/P-Dewilde/publication/221349994/figure/fig1/AS:669052770975757@1536526019493/Example-of-an-echelon-form-Elements-indicated-with-a-are-strictly-positive-The-QR.png)
+![alt text](https://i.stack.imgur.com/9YP3M.png)
 
 ## Contacts
 
