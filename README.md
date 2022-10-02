@@ -22,6 +22,10 @@ NOTES: `Matrix::GaussianElimination` dosent affect your original matrix.
 ## The algorithm
 
 Transforming matrix to echelon form:
+
+
+
+
 ![alt text](https://i.stack.imgur.com/9YP3M.png)
 
 ## Contacts
